@@ -13,7 +13,7 @@
  *     You should have received a copy of the GNU General Public License
  *     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package vlcj;
+package jme3.vlcj;
 
 import com.jme3.texture.Texture2D;
 import com.jme3.util.BufferUtils;
