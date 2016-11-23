@@ -1,0 +1,11 @@
+/dist
+/build
+/nbproject
+*.mp4
+OpenAL64.dll
+*.jar
+libvlccore.dll
+*.dll
+build.xml
+*.MF
+master-application.jnlp
