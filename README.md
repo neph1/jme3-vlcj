@@ -1,5 +1,5 @@
 # jme3-vlcj
-example of vlcj usage in jmonkeyengine3
+example of vlcj usage in jmonkeyengine3 (Based on: http://capricasoftware.co.uk/#/projects/vlcj/tutorial/direct-rendering)
 
 How to make it work:
 
