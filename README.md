@@ -5,6 +5,7 @@ How to make it work:
 
 Detailed post: http://www.softwarepioneering.com/2016/12/playing-video-in-jmonkeyengine-3-using.html
 
+Brief description:
 1. Clone https://github.com/caprica/vlcj
 
 2. Build a distribution (This is not entirely straight-forward for Netbeans users. It's a Maven project)
