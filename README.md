@@ -3,6 +3,8 @@ example of vlcj usage in jmonkeyengine3 (Based on: http://capricasoftware.co.uk/
 
 How to make it work:
 
+Detailed post: http://www.softwarepioneering.com/2016/12/playing-video-in-jmonkeyengine-3-using.html
+
 1. Clone https://github.com/caprica/vlcj
 
 2. Build a distribution (This is not entirely straight-forward for Netbeans users. It's a Maven project)
