@@ -24,6 +24,7 @@ import com.jme3.scene.shape.Quad;
 import com.jme3.texture.Image;
 import com.jme3.texture.Texture2D;
 import com.jme3.util.BufferUtils;
+import java.awt.image.BufferedImage;
 import uk.co.caprica.vlcj.component.DirectMediaPlayerComponent;
 import uk.co.caprica.vlcj.discovery.NativeDiscovery;
 import uk.co.caprica.vlcj.player.direct.BufferFormat;
@@ -48,10 +49,10 @@ public class TestVlcj extends SimpleApplication {
     private Texture2D texture;
     private Quad quad;
     
-    private String mediaFile = "";
+    private String mediaFile = "test_180.mp4";
     
     public TestVlcj(String[] args){
-        mediaFile = args[0];
+//        mediaFile = args[0];
     }
 
     @Override
@@ -64,7 +65,6 @@ public class TestVlcj extends SimpleApplication {
         image.setFormat(Image.Format.BGRA8);
         image.setData(BufferUtils.createByteBuffer(image.getWidth()*image.getHeight()*4));
         texture.setImage(image);
-        
         setupView();
         
         BufferFormatCallback bufferFormatCallback = new BufferFormatCallback() {
@@ -82,6 +82,8 @@ public class TestVlcj extends SimpleApplication {
             }
         };
         mediaPlayerComponent.getMediaPlayer().playMedia(mediaFile);
+        
+        stateManager.attach(new VlcControlsAppState(mediaPlayerComponent));
     }
     
     private void setupView(){
@@ -116,6 +118,7 @@ public class TestVlcj extends SimpleApplication {
 
     @Override
     public void stop() {
+        mediaPlayerComponent.release();
         System.exit(0);
         super.stop(); 
         
